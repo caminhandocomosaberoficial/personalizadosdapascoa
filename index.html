@@ -1,6 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+  <script>
+/* =========================
+   META PIXEL PROFISSIONAL
+   Pixel ID: 1591539398723711
+   Página de vendas
+========================= */
+(function() {
+  var PIXEL_ID = "1591539398723711";
+  var PRODUCT = {
+    content_name: "Pack 15 Artes Sacolinhas de Páscoa",
+    content_category: "Artes Digitais",
+    content_type: "product",
+    content_ids: ["pack-sacolinhas-pascoa-15-artes"],
+    value: 14.90,
+    currency: "BRL"
+  };
+
+  /* ========= BASE PIXEL ========= */
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;
+    n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+  }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', PIXEL_ID);
+  fbq('track', 'PageView');
+
+  /* ========= HELPERS ========= */
+  function safeTrack(eventName, params) {
+    try { fbq('track', eventName, params || {}); } catch(e) {}
+  }
+
+  function safeTrackCustom(eventName, params) {
+    try { fbq('trackCustom', eventName, params || {}); } catch(e) {}
+  }
+
+  function getText(el) {
+    return ((el && el.textContent) || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function once(fn) {
+    var fired = false;
+    return function() {
+      if (fired) return;
+      fired = true;
+      fn.apply(this, arguments);
+    };
+  }
+
+  /* ========= VIEWCONTENT =========
+     Dispara quando a pessoa realmente carregou a oferta
+  */
+  setTimeout(function() {
+    safeTrack('ViewContent', PRODUCT);
+  }, 800);
+
+  /* ========= LEAD =========
+     Botão principal da dobra inicial / CTA forte
+  */
+  var heroButtons = document.querySelectorAll('.btn, a[href*="checkout"], a[href*="ggcheckout"]');
+  if (heroButtons.length) {
+    heroButtons.forEach(function(btn, idx) {
+      btn.addEventListener('click', function() {
+        var payload = Object.assign({}, PRODUCT, {
+          button_text: getText(btn),
+          button_position: idx + 1
+        });
+
+        safeTrack('Lead', payload);
+
+        /* ========= ADDTOCART + INITIATECHECKOUT =========
+           Para links que levam ao checkout
+        */
+        var href = (btn.getAttribute('href') || '').toLowerCase();
+        if (
+          href.indexOf('checkout') > -1 ||
+          href.indexOf('ggcheckout') > -1 ||
+          href.indexOf('kiwify') > -1 ||
+          href.indexOf('pay.') > -1
+        ) {
+          safeTrack('AddToCart', payload);
+          safeTrack('InitiateCheckout', payload);
+        }
+      }, { passive: true });
+    });
+  }
+
+  /* ========= SCROLL DEPTH =========
+     Ajuda a medir engajamento da página
+  */
+  var scrollMarks = {25:false, 50:false, 75:false, 90:false};
+
+  window.addEventListener('scroll', function() {
+    var doc = document.documentElement;
+    var scrollTop = window.pageYOffset || doc.scrollTop || 0;
+    var scrollable = Math.max(doc.scrollHeight - doc.clientHeight, 1);
+    var percent = Math.round((scrollTop / scrollable) * 100);
+
+    [25, 50, 75, 90].forEach(function(mark) {
+      if (!scrollMarks[mark] && percent >= mark) {
+        scrollMarks[mark] = true;
+        safeTrackCustom('ScrollDepth', {
+          content_name: PRODUCT.content_name,
+          percent_scrolled: mark
+        });
+      }
+    });
+  }, { passive: true });
+
+  /* ========= FAQ CLICKS ========= */
+  document.querySelectorAll('.faq-question').forEach(function(item, index) {
+    item.addEventListener('click', function() {
+      safeTrackCustom('FAQClick', {
+        content_name: PRODUCT.content_name,
+        question: getText(item),
+        question_index: index + 1
+      });
+    }, { passive: true });
+  });
+
+  /* ========= WHATSAPP CLICKS =========
+     Caso exista link para WhatsApp
+  */
+  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"], a[href*="api.whatsapp.com"]').forEach(function(link, index) {
+    link.addEventListener('click', function() {
+      safeTrack('Contact', {
+        content_name: PRODUCT.content_name,
+        channel: 'WhatsApp',
+        link_position: index + 1,
+        button_text: getText(link)
+      });
+    }, { passive: true });
+  });
+
+  /* ========= SLIDER / GALERIA ========= */
+  var slider = document.getElementById('slides');
+  if (slider) {
+    var touched = once(function() {
+      safeTrackCustom('GalleryInteraction', {
+        content_name: PRODUCT.content_name,
+        interaction_type: 'swipe_or_touch'
+      });
+    });
+
+    slider.addEventListener('touchstart', touched, { passive: true });
+    slider.addEventListener('mousedown', touched, { passive: true });
+  }
+
+  /* ========= TEMPO NA PÁGINA ========= */
+  setTimeout(function() {
+    safeTrackCustom('TimeOnPage', {
+      content_name: PRODUCT.content_name,
+      seconds: 15
+    });
+  }, 15000);
+
+  setTimeout(function() {
+    safeTrackCustom('TimeOnPage', {
+      content_name: PRODUCT.content_name,
+      seconds: 30
+    });
+  }, 30000);
+})();
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1591539398723711&ev=PageView&noscript=1"/>
+</noscript>
+  
 <script>
   window.pixelId = "1591539398723711";
   var a = document.createElement("script");
