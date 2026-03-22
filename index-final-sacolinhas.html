@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sacolinhas de Páscoa para Imprimir</title>
+<style>
+body{margin:0;font-family:Arial;text-align:center;background:#fff;}
+.container{max-width:500px;margin:auto;padding:20px;}
+h1{font-size:22px;}
+.btn{display:block;width:100%;padding:18px;background:#ff5c8a;color:#fff;text-decoration:none;border-radius:40px;font-weight:bold;margin:20px 0;}
+.slider{position:relative;overflow:hidden;border-radius:20px;}
+.slides{display:flex;transition:transform 0.4s ease;}
+.slides img{width:100%;flex-shrink:0;}
+.dots{display:flex;justify-content:center;margin-top:10px;}
+.dot{width:8px;height:8px;margin:5px;background:#ccc;border-radius:50%;}
+.dot.active{background:#ff5c8a;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Crie sacolinhas de Páscoa lindas para vender ou presentear 🐰💰</h1>
+<p>Pack com 15 artes prontas para imprimir, montar e vender</p>
+
+<div class="slider">
+  <div class="slides" id="slides">
+    <img src="slidee1.png">
+    <img src="slidee2.png">
+    <img src="slidee3.png">
+    <img src="sem-texto.png">
+    <img src="MMOLDE PRRONNTO.jpg">
+  </div>
+</div>
+
+<div class="dots" id="dots"></div>
+
+<a href="https://www.ggcheckout.com/checkout/v5/W7BufGFj1uqTta8Sso9A" class="btn">Quero receber o pack agora 🐰</a>
+
+<p>📲 Você receberá todas as artes no WhatsApp</p>
+<p>⚠️ Preencha seu número corretamente</p>
+
+<a href="https://www.ggcheckout.com/checkout/v5/W7BufGFj1uqTta8Sso9A" class="btn">Quero começar agora 💰</a>
+
+</div>
+
+<script>
+const slides=document.getElementById('slides');
+const total=slides.children.length;
+let index=0;
+
+const dotsContainer=document.getElementById('dots');
+for(let i=0;i<total;i++){
+ let dot=document.createElement('div');
+ dot.classList.add('dot');
+ if(i===0) dot.classList.add('active');
+ dotsContainer.appendChild(dot);
+}
+const dots=document.querySelectorAll('.dot');
+
+setInterval(()=>{
+ index=(index+1)%total;
+ update();
+},3000);
+
+function update(){
+ slides.style.transform=`translateX(-${index*100}%)`;
+ dots.forEach(d=>d.classList.remove('active'));
+ dots[index].classList.add('active');
+}
+
+let startX=0;
+slides.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;});
+slides.addEventListener('touchend',e=>{
+ let endX=e.changedTouches[0].clientX;
+ if(startX>endX+50){index=(index+1)%total;}
+ else if(startX<endX-50){index=(index-1+total)%total;}
+ update();
+});
+</script>
+</body>
+</html>
