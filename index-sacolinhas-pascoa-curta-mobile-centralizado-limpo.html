@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>
+  window.pixelId = "1591539398723711";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<script>
+(function() {
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+    }
+    return null;
+  }
+
+  function getParam(param) {
+    return new URLSearchParams(window.location.search).get(param);
+  }
+
+  function ensureFbp() {
+    if (!getCookie('_fbp')) {
+      setCookie('_fbp', 'fb.1.' + Date.now() + '.' + Math.floor(Math.random()*1e9), 90);
+    }
+  }
+
+  function ensureFbc() {
+    var fbclid = getParam('fbclid');
+    if (fbclid) {
+      setCookie('_fbc', 'fb.1.' + Date.now() + '.' + fbclid, 90);
+    }
+  }
+
+  ensureFbp();
+  ensureFbc();
+})();
+</script>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'];
+  var query = new URLSearchParams();
+
+  keys.forEach(function(k){
+    if(params.get(k)) query.set(k, params.get(k));
+  });
+
+  if(query.toString() === "") return;
+
+  document.querySelectorAll('a[href]').forEach(function(link){
+    try {
+      var url = new URL(link.href, window.location.origin);
+      keys.forEach(function(k){
+        if(query.get(k) && !url.searchParams.get(k)){
+          url.searchParams.set(k, query.get(k));
+        }
+      });
+      link.href = url.toString();
+    } catch(e){}
+  });
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack de Artes Imprimíveis para Sacolinhas de Páscoa | PDF Pronto para Imprimir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary: #ef6fa5;
+    --primary-dark: #d9548d;
+    --light: #fff8fc;
+    --light-2: #fff1f7;
+    --card: #ffffff;
+    --text: #372d39;
+    --muted: #6d6371;
+    --line: #f3dbe7;
+    --green: #239b56;
+    --shadow: 0 14px 34px rgba(239, 111, 165, 0.18);
+    --radius: 22px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.55;
+    overflow-x: hidden;
+    padding-bottom: 96px;
+  }
+
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: -0.02em; }
+  img { display: block; max-width: 100%; border-radius: var(--radius); }
+  section { padding: 26px 0; }
+  .container { width: 100%; max-width: 560px; margin: 0 auto; padding: 0 16px; }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    color: #fff;
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+    border-radius: 999px;
+    padding: 17px 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 12px 24px rgba(239, 111, 165, 0.28);
+  }
+
+  .hero {
+    padding: 22px 0 26px;
+    background: linear-gradient(180deg, var(--light) 0%, var(--light-2) 100%);
+    border-bottom-left-radius: 34px;
+    border-bottom-right-radius: 34px;
+  }
+
+  .top-mini {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-dark);
+    border: 1px solid #ffd5e6;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.83rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  .hero-box {
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 28px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .hero .subtitle {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero p {
+    color: var(--muted);
+    font-size: 0.97rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-image {
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+
+  .quick-points {
+    display: grid;
+    gap: 9px;
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    justify-items: center;
+  }
+
+  .quick-points div,
+  .mini-list li,
+  .offer-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .quick-points div {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mobile-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .section-sub {
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .mini-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .mini-gallery img { height: 170px; width: 100%; object-fit: cover; }
+
+  .mini-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .money-strip {
+    background: linear-gradient(180deg, #fff8fb 0%, #fff3f8 100%);
+    border: 1px solid #ffd9ea;
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .money-strip h2 {
+    font-size: 1.35rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .money-strip p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .offer-section {
+    background: linear-gradient(180deg, #fff8fc 0%, #fff2f8 100%);
+    border-radius: 28px;
+    padding: 22px 18px;
+    border: 1px solid #ffd9e8;
+    box-shadow: var(--shadow);
+  }
+
+  .offer-section h2 {
+    text-align: center;
+    font-size: 1.45rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  .offer-section .sub {
+    display: block;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .price-wrap {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .old-price {
+    display: block;
+    color: var(--muted);
+    text-decoration: line-through;
+    font-size: 1rem;
+  }
+
+  .new-price {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--primary-dark);
+    margin: 4px 0;
+  }
+
+  .tiny-note {
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .offer-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin: 16px 0 18px;
+  }
+
+  .offer-list li { font-weight: 600; font-size: 0.95rem; }
+  .offer-list .emoji, .mini-list .emoji, .quick-points .emoji { width: 20px; flex: 0 0 20px; }
+
+  .guarantee {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+
+  .faq { padding-top: 22px; }
+  .faq h2 { text-align: center; font-size: 1.35rem; margin-bottom: 14px; }
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 0.96rem;
+  }
+  .faq-answer {
+    display: none;
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 0.93rem;
+  }
+
+  .sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid #f4d8e7;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .sticky-wrap {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .sticky-price {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.2;
+  }
+  .sticky-price strong {
+    display: block;
+    color: var(--primary-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+  }
+
+  .sticky-cta .btn {
+    width: auto;
+    min-width: 180px;
+    padding: 15px 16px;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 20px rgba(239, 111, 165, 0.22);
+  }
+
+  .fade-in { opacity: 0; transform: translateY(16px); transition: all 0.55s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @media (min-width: 768px) {
+    body { padding-bottom: 0; }
+    .sticky-cta { display: none; }
+    .hero h1 { font-size: 2.3rem; }
+    .mini-gallery img { height: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-box fade-in">
+      <div class="top-mini">🐰 Pack digital de Páscoa • acesso imediato</div>
+      <h1>Crie sacolinhas de Páscoa lindas para vender ou presentear 💝</h1>
+      <span class="subtitle">Artes prontas para imprimir, montar e encantar sem perder tempo criando do zero</span>
+      <p>Ideal para quem quer fazer lembrancinhas com aparência profissional, montar rápido em casa e aproveitar a Páscoa para vender ou presentear.</p>
+
+      <div class="hero-image">
+        <img src="molde-pronto.jpg" alt="Sacolinha de Páscoa personalizada pronta com chocolates dentro">
+      </div>
+
+      <a href="#comprar" class="btn">Quero receber o pack agora 🐰</a>
+
+      <div class="quick-points">
+        <div><span class="emoji">📩</span><span>Download liberado logo após a compra</span></div>
+        <div><span class="emoji">🖨️</span><span>Pronto para imprimir e montar em casa</span></div>
+        <div><span class="emoji">💰</span><span>Perfeito para vender com chocolates</span></div>
+        <div><span class="emoji">🎀</span><span>Modelos fofos, masculinos e religiosos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq">
+  <div class="container">
+    <h2 class="fade-in">Perguntas frequentes</h2>
+
+    <div class="faq-item fade-in">
+      <div class="faq-question">O que eu recebo após a compra? <span>+</span></div>
+      <div class="faq-answer">Você recebe um produto digital com as artes imprimíveis das sacolinhas de Páscoa, pronto para baixar e usar na sua produção.</div>
+    </div>
+
+    <div class="faq-item fade-in">
+      <div class="faq-question">Esse produto é físico? <span>+</span></div>
+      <div class="faq-answer">Não. Este é um produto digital. Nada será enviado pelos Correios. O acesso é liberado online após a confirmação do pagamento.</div>
+    </div>
+
+    <div class="faq-item fade-in">
+      <div class="faq-question">É difícil montar? <span>+</span></div>
+      <div class="faq-answer">Não. Você imprime, recorta, monta e adiciona os chocolates ou itens que desejar.</div>
+    </div>
+
+    <div class="faq-item fade-in">
+      <div class="faq-question">Posso fazer para vender? <span>+</span></div>
+      <div class="faq-answer">Sim. Esse pack é ideal para quem quer faturar com lembrancinhas de Páscoa e montar encomendas com mais agilidade.</div>
+    </div>
+  </div>
+</section>
+
+<div class="sticky-cta">
+  <div class="sticky-wrap">
+    <div class="sticky-price">
+      <strong>R$14,90</strong>
+      <span>Pack digital com acesso imediato</span>
+    </div>
+    <a href="https://www.ggcheckout.com/checkout/v5/QtHF8jyEEi8LEe620F9m" class="btn">Comprar agora 🐰</a>
+  </div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      const sign = item.querySelector('span');
+      const isOpen = answer.style.display === 'block';
+
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+      document.querySelectorAll('.faq-question span').forEach(s => s.textContent = '+');
+
+      if (!isOpen) {
+        answer.style.display = 'block';
+        sign.textContent = '-';
+      }
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function canTrack() {
+    return typeof window.fbq === 'function';
+  }
+
+  function trackStandard(eventName, params) {
+    if (!canTrack()) return;
+    try {
+      window.fbq('track', eventName, params || {});
+    } catch (e) {}
+  }
+
+  function trackCustom(eventName, params) {
+    if (!canTrack()) return;
+    try {
+      window.fbq('trackCustom', eventName, params || {});
+    } catch (e) {}
+  }
+
+  var productData = {
+    content_ids: ['pack-sacolinhas-pascoa-imprimiveis'],
+    content_name: 'Pack de Sacolinhas de Páscoa',
+    content_category: 'Artes Digitais',
+    content_type: 'product',
+    value: 14.90,
+    currency: 'BRL'
+  };
+
+  setTimeout(function() {
+    trackStandard('ViewContent', productData);
+  }, 800);
+
+  document.querySelectorAll('a[href="#comprar"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      trackStandard('Lead', Object.assign({}, productData, {
+        cta_location: 'hero',
+        button_text: (link.textContent || '').trim()
+      }));
+    }, { passive: true });
+  });
+
+  document.querySelectorAll('a[href*="checkout"], a[href*="ggcheckout"], a[href*="pay."], a[href*="kiwify"]').forEach(function(link, index) {
+    link.addEventListener('click', function() {
+      var payload = Object.assign({}, productData, {
+        button_text: (link.textContent || '').trim(),
+        checkout_url: link.href,
+        position: index + 1
+      });
+
+      trackStandard('AddToCart', payload);
+      trackStandard('InitiateCheckout', payload);
+    }, { passive: true });
+  });
+
+  document.querySelectorAll('.faq-question').forEach(function(item, index) {
+    item.addEventListener('click', function() {
+      var questionText = item.cloneNode(true);
+      var span = questionText.querySelector('span');
+      if (span) span.remove();
+      trackCustom('FAQClick', {
+        content_name: productData.content_name,
+        question: (questionText.textContent || '').trim(),
+        question_index: index + 1
+      });
+    }, { passive: true });
+  });
+});
+</script>
+
+</body>
+</html>
